@@ -1,17 +1,5 @@
-import Home from './Home'
-import OpenShow from './OpenShow'
-
-// 映射表
-const screenMap = {
-    OpenShow: {
-        component: OpenShow,
-        title: 'OpenShow'
-    },
-    Home: {
-        component: Home,
-        title: '首页'
-    },
-}
+import OpenShow from './OpenShow/index'
+import SectionList from './SectionList/index'
 
 // 匹配
 const navaigationOptions = (name, options = {}) => {
@@ -24,8 +12,21 @@ const navaigationOptions = (name, options = {}) => {
     }
 }
 
+// 映射表
+const screenMap = {
+    OpenShow: {
+        component: OpenShow,
+        title: 'OpenShow'
+    },
+    SectionList: {
+        component: SectionList,
+        title: 'SectionList组件'
+    },
+}
+
+
 export default {
     OpenShow: navaigationOptions('OpenShow', {header: null}),
-    Home: navaigationOptions('Home'),
+    SectionList: navaigationOptions('SectionList'),
 }
 

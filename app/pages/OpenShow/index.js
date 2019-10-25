@@ -4,7 +4,7 @@
 import React, {Component} from 'react'
 import {View, Text, Button, StyleSheet} from 'react-native'
 
-export default class OpenShow extends Component {
+export default class Index extends Component {
     static = {}
 
     componentDidMount() {

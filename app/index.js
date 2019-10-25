@@ -6,7 +6,7 @@ import tabs from './router/tab'
 import pageList from './pages/index'
 
 const stackConfig = {
-    initialRouteName: 'OpenShow',
+    initialRouteName: 'tabs', // OpenShow
 }
 
 const RouterList = createStackNavigator({
