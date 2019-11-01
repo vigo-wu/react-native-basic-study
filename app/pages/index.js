@@ -1,5 +1,11 @@
+import React, {Component} from 'react'
+import Icon from 'react-native-vector-icons/CustomIcon';
+import Rollback from '../common/Rollback'
+
+
 import OpenShow from './OpenShow/index'
 import SectionList from './SectionList/index'
+
 
 // 匹配
 const navaigationOptions = (name, options = {}) => {
@@ -7,6 +13,7 @@ const navaigationOptions = (name, options = {}) => {
         screen: screenMap[name].component,
         navigationOptions: {
             title: screenMap[name].title,
+            headerLeft: ({scene: { descriptor: { navigation: navigation } }}) => <Rollback navigation={ navigation } />,
             ...options
         }
     }

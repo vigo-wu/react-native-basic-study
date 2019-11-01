@@ -19,7 +19,7 @@ class ListItem extends Component {
 
     render() {
         return (
-            <TouchableHighlight activeOpacity={1} style={styles.touchable} onPress={ this.skipToPage.bind(this) }>
+            <TouchableHighlight activeOpacity={0.8} style={styles.touchable} onPress={ this.skipToPage.bind(this) } underlayColor="#409EFF">
                 <View style={ styles.wrap }>
                     <Text style={ styles.textFC }>{ this.props.target.title }</Text>
                     <Icon name="angle-right" size={ 30 }></Icon>
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#ccc',
         borderStyle: 'solid',
+        backgroundColor: '#fff'
     },
     textFC: {
         color: '#333',
