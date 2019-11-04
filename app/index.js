@@ -3,6 +3,8 @@ import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import Icon from 'react-native-vector-icons/AntDesign';
 
+
+
 import tabs from './router/tab'
 import pageList from './pages/index'
 
@@ -22,4 +24,11 @@ const RouterList = createStackNavigator({
 }, stackConfig)
 
 
-export default createAppContainer(RouterList)
+export default createAppContainer(RouterList);
+
+
+
+
+
+
+

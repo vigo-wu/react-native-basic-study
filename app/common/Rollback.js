@@ -1,25 +1,24 @@
 import React from 'react'
-import {View, StyleSheet} from 'react-native'
+import {View, TouchableHighlight ,StyleSheet} from 'react-native'
 import Icon from 'react-native-vector-icons/CustomIcon';
 
 export default class Rollback extends React.Component{
 
-    enterBack() {
-        this.props.navigation.goBack()
-    }
-
-
     render() {
         return(
-            <View style={styles.wrap}>
-                <Icon onPress={ this.enterBack.bind(this) } name="icrollback" size={ 30 }></Icon>
-            </View>
+            <TouchableHighlight style={styles.wrap} onPress={ () => this.props.navigation.goBack() }>
+                <Icon name="icrollback" size={ 30 } style={ styles.bgf }></Icon>
+            </TouchableHighlight >
         );
     }
 }
 
 const styles = StyleSheet.create({
     wrap: {
-        paddingLeft: 15
+        flex: 1,
+        marginLeft: 15,
+    },
+    bgf: {
+        backgroundColor: '#fff',
     }
 })

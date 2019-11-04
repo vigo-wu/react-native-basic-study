@@ -38,6 +38,7 @@ export default class root extends Component{
                 <FlatList
                     data={ list }
                     renderItem={ ({ item }) => <ListItem navigation={ this.props.navigation } target={ item } /> }
+                    keyExtractor={ (item, index) => item.routerName }
                 />
             </View>
         )

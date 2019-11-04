@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
+import { connect } from 'react-redux';
 
-
-export default class root extends Component {
+class Root extends Component {
 
     render() {
         return (
@@ -12,3 +12,8 @@ export default class root extends Component {
         );
     }
 }
+
+
+
+
+export default connect(state => ({ value: state }))(Root);
