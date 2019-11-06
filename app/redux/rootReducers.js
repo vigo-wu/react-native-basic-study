@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import saveNavigationToStore from './reducers/index'
+import globalState from './reducers/index'
 
 export default combineReducers({
-    saveNavigationToStore,
+    globalState,
 })
